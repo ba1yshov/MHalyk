@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">MHalyk</string>
+    <string name="halyk">HALYK</string>
+    <string name="messenger">MESSENGER</string>
+    <string name="email">Email</string>
+    <string name="position">Должность</string>
+    <string name="create_new_account">Создать новый аккаунт</string>
+    <string name="add_image">Добавить фото</string>
+    <string name="fio">ФИО</string>
+    <string name="department">Отдел</string>
+    <string name="select_user">Выберите сотрудника</string>
+    <string name="select_users_group">Выберите группу</string>
+    <string name="sign_up">Зарегистрироваться</string>
+    <string name="sign_in">Войти</string>
+    <string name="type_a_message">Введите сообщение</string>
+    <string name="no_account">У вас еще нет аккаунта?</string>
+    <string name="sign_acc">Войдите в свой аккаунт?</string>
+    <string name="online">В сети</string>
+    <string name="phoneNumber">Телефон</string>
+    <string name="branch">Филиал</string>
+    <string name="password_comp_employee">пароль от вашего компа</string>
+    <string name="pass_comp_employee">пароль компа сотрудника</string>
+    <string name="user_profile">Профиль пользователя</string>
+    <string name="fio_placeholder">ФИО:</string>
+    <string name="position_placeholder">Должность:</string>
+    <string name="department_placeholder">Отдел:</string>
+    <string name="email_placeholder">Почта:</string>
+    <string name="phone_placeholder">Телефон:</string>
+    <string name="branch_placeholder">Филиал:</string>
+</resources>

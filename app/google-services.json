@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "545755311782",
+    "project_id": "chat-mesage-88e12",
+    "storage_bucket": "chat-mesage-88e12.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:545755311782:android:cccca86a26c7d9671d8e67",
+        "android_client_info": {
+          "package_name": "com.example.mhalyk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "545755311782-3p8i0f2n3d2l6t2joh4e33ooobh6mhot.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGadcFRp7HqpeYZXP2emmPtG0_69oKDJc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "545755311782-3p8i0f2n3d2l6t2joh4e33ooobh6mhot.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

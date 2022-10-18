@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/MHalyk/app/src/main/res/drawable/ic_halyk_icon.xml" value="0.1945" />
+        <entry key="..\:/MHalyk/app/src/main/res/drawable/ic_info.xml" value="0.1945" />
+        <entry key="..\:/MHalyk/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1945" />
+        <entry key="..\:/MHalyk/app/src/main/res/drawable/ic_logout.xml" value="0.1945" />
+        <entry key="..\:/MHalyk/app/src/main/res/drawable/ic_notification.xml" value="0.1945" />
+        <entry key="..\:/MHalyk/app/src/main/res/layout/activity_chat.xml" value="0.1" />
+        <entry key="..\:/MHalyk/app/src/main/res/layout/activity_group_chat.xml" value="0.20416666666666666" />
+        <entry key="..\:/MHalyk/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/MHalyk/app/src/main/res/layout/activity_users.xml" value="0.20416666666666666" />
+        <entry key="..\:/MHalyk/app/src/main/res/layout/item_container_received_message.xml" value="0.20416666666666666" />
+        <entry key="..\:/MHalyk/app/src/main/res/layout/item_container_recent_conversion.xml" value="0.20416666666666666" />
+        <entry key="..\:/MHalyk/app/src/main/res/layout/item_container_sent_message.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Suiun/AndroidStudioProjects/MHalyk/app/src/main/res/drawable/background_chat_input.xml" value="0.195" />
+        <entry key="..\:/Users/Suiun/AndroidStudioProjects/MHalyk/app/src/main/res/drawable/background_content_bottom.xml" value="0.195" />
+        <entry key="..\:/Users/Suiun/AndroidStudioProjects/MHalyk/app/src/main/res/drawable/background_content_top.xml" value="0.195" />
+        <entry key="..\:/Users/Suiun/AndroidStudioProjects/MHalyk/app/src/main/res/drawable/background_icon.xml" value="0.195" />
+        <entry key="..\:/Users/Suiun/AndroidStudioProjects/MHalyk/app/src/main/res/drawable/background_sent_message.xml" value="0.195" />
+        <entry key="..\:/Users/Suiun/AndroidStudioProjects/MHalyk/app/src/main/res/font/bowlby_one_sc.xml" value="0.284375" />
+        <entry key="..\:/Users/Suiun/AndroidStudioProjects/MHalyk/app/src/main/res/font/candal.xml" value="0.284375" />
+        <entry key="..\:/Users/Suiun/AndroidStudioProjects/MHalyk/app/src/main/res/layout/activity_chat.xml" value="0.176" />
+        <entry key="..\:/Users/Suiun/AndroidStudioProjects/MHalyk/app/src/main/res/layout/activity_group_chat.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/Suiun/AndroidStudioProjects/MHalyk/app/src/main/res/layout/activity_main.xml" value="0.152" />
+        <entry key="..\:/Users/Suiun/AndroidStudioProjects/MHalyk/app/src/main/res/layout/activity_sign_in.xml" value="0.176" />
+        <entry key="..\:/Users/Suiun/AndroidStudioProjects/MHalyk/app/src/main/res/layout/activity_sign_up.xml" value="0.264" />
+        <entry key="..\:/Users/Suiun/AndroidStudioProjects/MHalyk/app/src/main/res/layout/activity_sing_up.xml" value="0.264" />
+        <entry key="..\:/Users/Suiun/AndroidStudioProjects/MHalyk/app/src/main/res/layout/activity_users.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/Suiun/AndroidStudioProjects/MHalyk/app/src/main/res/layout/activity_users_profile.xml" value="0.264" />
+        <entry key="..\:/Users/Suiun/AndroidStudioProjects/MHalyk/app/src/main/res/layout/item_container_received_message.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/Suiun/AndroidStudioProjects/MHalyk/app/src/main/res/layout/item_container_recent_conversion.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/Suiun/AndroidStudioProjects/MHalyk/app/src/main/res/layout/item_container_sent_message.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Suiun/AndroidStudioProjects/MHalyk/app/src/main/res/layout/item_container_user.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/Suiun/AndroidStudioProjects/MHalyk/app/src/main/res/mipmap-anydpi-v26/ic_halyk.xml" value="0.1" />
+        <entry key="..\:/Users/Suiun/AndroidStudioProjects/MHalyk/app/src/main/res/mipmap-anydpi-v26/ic_halyk_round.xml" value="0.195" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
