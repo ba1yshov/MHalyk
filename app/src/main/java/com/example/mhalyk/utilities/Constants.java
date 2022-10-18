@@ -42,7 +42,7 @@ public class Constants {
 
     public static HashMap<String, String> getRemoteMsgHeaders() {
         if (remoteMsgHeaders == null) {
-            if (remoteMsgHeaders == null) {
+            if (remoteMsgHeaders != null) {}
             remoteMsgHeaders = new HashMap<>();
             remoteMsgHeaders.put(
                     REMOTE_MSG_AUTHORIZATION,
