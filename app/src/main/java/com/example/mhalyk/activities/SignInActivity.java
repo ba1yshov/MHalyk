@@ -8,30 +8,24 @@ import android.util.Patterns;
 import android.view.View;
 import android.widget.Toast;
 
-import com.example.mhalyk.R;
 import com.example.mhalyk.databinding.ActivitySignInBinding;
 import com.example.mhalyk.utilities.Constants;
 import com.example.mhalyk.utilities.PreferenceManager;
-import com.google.android.gms.tasks.OnFailureListener;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-
-import org.w3c.dom.Document;
-
-import java.util.HashMap;
 
 public class SignInActivity extends AppCompatActivity {
 
     private ActivitySignInBinding binding;
-    private PreferenceManager preferenceManager;
+    private PreferenceManager NURSManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivitySignInBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        preferenceManager = new PreferenceManager(getApplicationContext());
-        if(preferenceManager.getBoolean(Constants.KEY_IS_SIGNED_IN)) {
+        NURSManager = new PreferenceManager(getApplicationContext());
+        if(NURSManager.getBoolean(Constants.KEY_IS_SIGNED_IN)) {
             Intent intent = new Intent(getApplicationContext(), MainActivity.class);
             startActivity(intent);
             finish();
@@ -60,10 +54,10 @@ public class SignInActivity extends AppCompatActivity {
                     if(task.isSuccessful() && task.getResult() != null
                             && task.getResult().getDocuments().size() > 0) {
                         DocumentSnapshot documentSnapshot = task.getResult().getDocuments().get(0);
-                        preferenceManager.putBoolean(Constants.KEY_IS_SIGNED_IN, true);
-                        preferenceManager.putString(Constants.KEY_USER_ID, documentSnapshot.getId());
-                        preferenceManager.putString(Constants.KEY_FIO, documentSnapshot.getString(Constants.KEY_FIO));
-                        preferenceManager.putString(Constants.KEY_IMAGE, documentSnapshot.getString(Constants.KEY_IMAGE));
+                        NURSManager.putBoolean(Constants.KEY_IS_SIGNED_IN, true);
+                        NURSManager.putString(Constants.KEY_USER_ID, documentSnapshot.getId());
+                        NURSManager.putString(Constants.KEY_FIO, documentSnapshot.getString(Constants.KEY_FIO));
+                        NURSManager.putString(Constants.KEY_IMAGE, documentSnapshot.getString(Constants.KEY_IMAGE));
                         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                         startActivity(intent);
