@@ -25,7 +25,8 @@ public class SignInActivity extends AppCompatActivity {
         binding = ActivitySignInBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         NURSManager = new PreferenceManager(getApplicationContext());
-        if(NURSManager.getBoolean(Constants.KEY_IS_SIGNED_IN)) {
+        if(NURSManager.getBoolean(Constants.KEY_IS_SIGNED_IN))
+        {
             Intent intent = new Intent(getApplicationContext(), MainActivity.class);
             startActivity(intent);
             finish();
@@ -33,17 +34,20 @@ public class SignInActivity extends AppCompatActivity {
         setListeners();
     }
 
-    private void setListeners() {
+    private void setListeners()
+    {
         binding.textCreateNewAccount.setOnClickListener(v ->
                 startActivity(new Intent(getApplicationContext(), SignUpActivity.class)));
         binding.buttonSignIn.setOnClickListener(v -> {
-            if(isValidSignInDetails()) {
+            if(isValidSignInDetails())
+            {
                 signIn();
             }
         });
     }
 
-    private void signIn() {
+    private void signIn()
+    {
         loading(true);
         FirebaseFirestore database = FirebaseFirestore.getInstance();
         database.collection(Constants.KEY_COLLECTION_USERS)
@@ -75,7 +79,8 @@ public class SignInActivity extends AppCompatActivity {
             binding.buttonSignIn.setVisibility(View.INVISIBLE);
             binding.progressBar.setVisibility(View.VISIBLE);
         }
-        else {
+        else
+        {
             binding.progressBar.setVisibility(View.INVISIBLE);
             binding.buttonSignIn.setVisibility(View.VISIBLE);
         }
@@ -86,17 +91,22 @@ public class SignInActivity extends AppCompatActivity {
         Toast.makeText(getApplicationContext(), message , Toast.LENGTH_SHORT).show();
     }
 
-    private Boolean isValidSignInDetails() {
-        if (binding.inputEmail.getText().toString().trim().isEmpty()) {
+    private Boolean isValidSignInDetails()
+    {
+        if (binding.inputEmail.getText().toString().trim().isEmpty())
+        {
             showToast("Введите электронную почту");
             return false;
-        } else if (!Patterns.EMAIL_ADDRESS.matcher(binding.inputEmail.getText().toString()).matches()) {
+        } else if (!Patterns.EMAIL_ADDRESS.matcher(binding.inputEmail.getText().toString()).matches())
+        {
             showToast("Введите действительный email!");
             return false;
-        } else if (binding.inputPasswordOfCompEmp.getText().toString().trim().isEmpty()) {
+        } else if (binding.inputPasswordOfCompEmp.getText().toString().trim().isEmpty())
+        {
             showToast("Введите пароль");
             return false;
-        } else {
+        } else
+        {
             return true;
         }
     }
