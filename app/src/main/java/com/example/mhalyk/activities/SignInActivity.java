@@ -14,11 +14,12 @@ import com.example.mhalyk.utilities.PreferenceManager;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-// Сделал авторизацию
+// Сделал авторизацию тт
 public class SignInActivity extends AppCompatActivity {
 
     private ActivitySignInBinding binding;
     private PreferenceManager NURSManager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,11 +34,13 @@ public class SignInActivity extends AppCompatActivity {
         setListeners();
     }
 
-    private void setListeners() {
+    private void setListeners()
+    {
         binding.textCreateNewAccount.setOnClickListener(v ->
                 startActivity(new Intent(getApplicationContext(), SignUpActivity.class)));
         binding.buttonSignIn.setOnClickListener(v -> {
-            if (isValidSignInDetails()) {
+            if (isValidSignInDetails())
+            {
                 signIn();
             }
         });
@@ -52,7 +55,8 @@ public class SignInActivity extends AppCompatActivity {
                 .get()
                 .addOnCompleteListener(task -> {
                     if (task.isSuccessful() && task.getResult() != null
-                            && task.getResult().getDocuments().size() > 0) {
+                            && task.getResult().getDocuments().size() > 0)
+                    {
                         DocumentSnapshot documentSnapshot = task.getResult().getDocuments().get(0);
                         NURSManager.putBoolean(Constants.KEY_IS_SIGNED_IN, true);
                         NURSManager.putString(Constants.KEY_USER_ID, documentSnapshot.getId());
@@ -61,7 +65,8 @@ public class SignInActivity extends AppCompatActivity {
                         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                         startActivity(intent);
-                    } else {
+                    } else
+                    {
                         loading(false);
                         showToast("Неверный пароль");
                     }
@@ -69,23 +74,29 @@ public class SignInActivity extends AppCompatActivity {
 
     }
 
-    private void loading(Boolean isLoading) {
-        if (isLoading) {
+    private void loading(Boolean isLoading)
+    {
+        if (isLoading)
+        {
             binding.buttonSignIn.setVisibility(View.INVISIBLE);
             binding.progressBar.setVisibility(View.VISIBLE);
-        } else {
+        } else
+        {
             binding.progressBar.setVisibility(View.INVISIBLE);
             binding.buttonSignIn.setVisibility(View.VISIBLE);
         }
 
     }
 
-    private void showToast(String message) {
+    private void showToast(String message)
+    {
         Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
     }
 
-    private Boolean isValidSignInDetails() {
-        if (binding.inputEmail.getText().toString().trim().isEmpty()) {
+    private Boolean isValidSignInDetails()
+    {
+        if (binding.inputEmail.getText().toString().trim().isEmpty())
+        {
             showToast("Введите электронную почту");
             return false;
         } else if (!Patterns.EMAIL_ADDRESS.matcher(binding.inputEmail.getText().toString()).matches()) {
