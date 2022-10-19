@@ -55,7 +55,7 @@ public class UsersProfileActivity extends BaseActivity {
 
     private void FetchUserFromFirestore() {
         FirebaseFirestore database = FirebaseFirestore.getInstance();
-        DocumentReference documentReference = database.collection("users").document("Mt7PSk5r28oAvgKJ2ThP");
+        DocumentReference documentReference = database.collection("users").document("aBiowN68z27qhqYMawPh");//мастеринер озгортту
         documentReference.get().addOnSuccessListener(documentSnapshot -> {
                     if (documentSnapshot.exists()) {
                         tv1.setText(documentSnapshot.getString("fio"));
