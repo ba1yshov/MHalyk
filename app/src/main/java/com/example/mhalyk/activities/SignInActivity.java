@@ -13,7 +13,7 @@ import com.example.mhalyk.utilities.Constants;
 import com.example.mhalyk.utilities.PreferenceManager;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-
+// Сделал авторизацию
 public class SignInActivity extends AppCompatActivity {
 
     private ActivitySignInBinding binding;
