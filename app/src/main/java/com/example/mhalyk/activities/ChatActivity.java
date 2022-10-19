@@ -44,6 +44,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+//Класс окна чата
 public class ChatActivity extends BaseActivity {
 
     private ActivityChatBinding binding;

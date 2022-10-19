@@ -40,6 +40,7 @@ public class Constants {
 
     public static HashMap<String, String> remoteMsgHeaders = null;
 
+
     public static HashMap<String, String> getRemoteMsgHeaders() {
         if (remoteMsgHeaders == null) {
             remoteMsgHeaders = new HashMap<>();
