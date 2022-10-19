@@ -14,7 +14,7 @@ import com.example.mhalyk.utilities.PreferenceManager;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-// Сделал авторизацию 4
+// Сделал авторизацию 6
 public class SignInActivity extends AppCompatActivity {
 
     private ActivitySignInBinding binding;
