@@ -13,7 +13,8 @@ import com.example.mhalyk.utilities.Constants;
 import com.example.mhalyk.utilities.PreferenceManager;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-// Сделал авторизацию
+
+// Сделал авторизацию2
 public class SignInActivity extends AppCompatActivity {
 
     private ActivitySignInBinding binding;
@@ -25,7 +26,7 @@ public class SignInActivity extends AppCompatActivity {
         binding = ActivitySignInBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         NURSManager = new PreferenceManager(getApplicationContext());
-        if(NURSManager.getBoolean(Constants.KEY_IS_SIGNED_IN)) {
+        if (NURSManager.getBoolean(Constants.KEY_IS_SIGNED_IN)) {
             Intent intent = new Intent(getApplicationContext(), MainActivity.class);
             startActivity(intent);
             finish();
@@ -37,7 +38,7 @@ public class SignInActivity extends AppCompatActivity {
         binding.textCreateNewAccount.setOnClickListener(v ->
                 startActivity(new Intent(getApplicationContext(), SignUpActivity.class)));
         binding.buttonSignIn.setOnClickListener(v -> {
-            if(isValidSignInDetails()) {
+            if (isValidSignInDetails()) {
                 signIn();
             }
         });
@@ -51,7 +52,7 @@ public class SignInActivity extends AppCompatActivity {
                 .whereEqualTo(Constants.KEY_PASSWORD, binding.inputPasswordOfCompEmp.getText().toString())
                 .get()
                 .addOnCompleteListener(task -> {
-                    if(task.isSuccessful() && task.getResult() != null
+                    if (task.isSuccessful() && task.getResult() != null
                             && task.getResult().getDocuments().size() > 0) {
                         DocumentSnapshot documentSnapshot = task.getResult().getDocuments().get(0);
                         NURSManager.putBoolean(Constants.KEY_IS_SIGNED_IN, true);
@@ -61,8 +62,7 @@ public class SignInActivity extends AppCompatActivity {
                         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                         startActivity(intent);
-                    }
-                    else {
+                    } else {
                         loading(false);
                         showToast("Неверный пароль");
                     }
@@ -71,11 +71,10 @@ public class SignInActivity extends AppCompatActivity {
     }
 
     private void loading(Boolean isLoading) {
-        if(isLoading) {
+        if (isLoading) {
             binding.buttonSignIn.setVisibility(View.INVISIBLE);
             binding.progressBar.setVisibility(View.VISIBLE);
-        }
-        else {
+        } else {
             binding.progressBar.setVisibility(View.INVISIBLE);
             binding.buttonSignIn.setVisibility(View.VISIBLE);
         }
@@ -83,7 +82,7 @@ public class SignInActivity extends AppCompatActivity {
     }
 
     private void showToast(String message) {
-        Toast.makeText(getApplicationContext(), message , Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
     }
 
     private Boolean isValidSignInDetails() {
